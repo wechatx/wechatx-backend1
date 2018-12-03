@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     from = params[:from]|| 1
     to = params[:to] || 100
     result = User.all[ from - 1, to]
-    render json: {:stateus => 'success',:result => result},:callback => params[:callback]
+    render json: {:status => 'success',:result => result},:callback => params[:callback]
   end
 
   def create
